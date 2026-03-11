@@ -152,8 +152,8 @@ function App() {
   };
 
   const isSupperMode = filters.time === '宵夜';
-  const availableFoods = foods.filter(f => !f.isBlocked);
-  const filteredFoods = availableFoods.filter(food => {
+  const availableFoods = foods.filter((f: Food) => !f.isBlocked);
+  const filteredFoods = availableFoods.filter((food: Food) => {
     const timeMatch = filters.time === '全部' || food.time === filters.time;
     const tasteMatch = filters.taste === '全部' || food.taste === filters.taste;
     let cuisineMatch = true;
